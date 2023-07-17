@@ -21,7 +21,7 @@ ini_set('default_charset','UTF-8');
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="estilo/estiloIndex2.css">
+    <link rel="stylesheet" href="./css/estilo/estiloIndex2.css">
   </head>
 
   <body>
@@ -52,7 +52,10 @@ ini_set('default_charset','UTF-8');
               <form id="formCadastrar" action="" method="post">  
                 <form class="form-signin">
                       <div class="text-center mb-4">
-                          <img class="mb-4" src="img/logoSEBRAE.jpg" alt="" width="230" height="110">
+                          <br>
+                          <br>
+                          <br>
+                          <img class="mb-4" src="img/01.png" alt="" width="120" height="110">
                           <h1 class="h3 mb-3 font-weight-normal">Sistema de cadastro de locais</h1>
                       </div>
                       
