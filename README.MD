@@ -9,5 +9,5 @@
 
 ### para testar o código, por favor rodar o script do banco de dados, pois já ali possui usuários para acessar o sistema
 
-### utilizar o usuário root
+### utilizar o usuário root@gmail.com
 ### senha 1234
