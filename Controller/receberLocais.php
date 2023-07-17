@@ -1,5 +1,5 @@
 <?php
-require_once '../classe/s_locais.php';
+require_once '../Model/s_locais.php';
 ob_start();
 require_once '../Model/validacao_login.php';
 ini_set('default_charset','UTF-8');
