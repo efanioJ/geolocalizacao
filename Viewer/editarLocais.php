@@ -65,6 +65,7 @@ ini_set('default_charset','UTF-8');
                             <label for="longitude" class="lead">Longitude<span class="corCamposObri">*</span></label>
                             <input type="text" name="longitude" id="longitude" class="form-control lead" placeholder="" value="<?php echo $val->longitude ?>" ReadOnly>
                           </div>
+                          <input type="text" name="coordenadasPoligono" id="coordenadasPoligono" class="form-control lead inputFile" value="<?php echo $val->coordenadasPoligono ?>" placeholder="">
                           <div class="form-group col-md-2.5 align-self-end ">
                             <button type="button"  name = "buscarEditar" id="buscarEditar" role="button" class="btn btn btn-primary estiloFonte">Ver no mapa</button>
                           </div>

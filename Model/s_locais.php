@@ -21,6 +21,7 @@ class s_locais extends conexao{
 	private $nomeLocal;
 	private $latitude;
 	private $longitude;
+	private $coordenadasPoligono;
 	
 	
 	public function setNome($nome){
@@ -47,6 +48,9 @@ class s_locais extends conexao{
 	}
 	public function setLongitude($longitude){
 		$this->longitude = $longitude;
+	}
+	public function setCoordenadasPoligono($coordenadasPoligono){
+		$this->coordenadasPoligono = $coordenadasPoligono;
 	}
 
 		
@@ -258,11 +262,12 @@ class s_locais extends conexao{
 ////////////////////////////////////////////////// INÍCIO DAS FUNÇÕES DA TABELA LOCAIS ////////////////////////////////////////////////////////////	
 public function inserirLocais(){
 		try{
-			$sql = "INSERT INTO $this->table2(nomeLocal,latitude,longitude) VALUES (:nomeLocal,:latitude,:longitude)";
+			$sql = "INSERT INTO $this->table2(nomeLocal,latitude,longitude,coordenadasPoligono) VALUES (:nomeLocal,:latitude,:longitude,:coordenadasPoligono)";
 			$stmt = conexao::prepare($sql);
 			$stmt->bindParam(':nomeLocal', $this->nomeLocal);
 			$stmt->bindParam(':latitude', $this->latitude);
 			$stmt->bindParam(':longitude', $this->longitude);
+			$stmt->bindParam(':coordenadasPoligono', $this->coordenadasPoligono);
 			
 			return $stmt->execute();
 		}
@@ -272,12 +277,13 @@ public function inserirLocais(){
     
 public function atualizarLocais(){
 		try{
-			$sql = "UPDATE $this->table2 SET idLocal=:idLocal, nomeLocal = :nomeLocal,latitude = :latitude, longitude = :longitude WHERE idLocal = :idLocal";
+			$sql = "UPDATE $this->table2 SET idLocal=:idLocal, nomeLocal = :nomeLocal,latitude = :latitude, longitude = :longitude, coordenadasPoligono = :coordenadasPoligono WHERE idLocal = :idLocal";
 			$stmt = conexao::prepare($sql);
 			$stmt->bindParam(':idLocal', $this->idLocal);
 			$stmt->bindParam(':nomeLocal', $this->nomeLocal);
 			$stmt->bindParam(':latitude', $this->latitude);
 			$stmt->bindParam(':longitude', $this->longitude);
+			$stmt->bindParam(':coordenadasPoligono', $this->coordenadasPoligono);
 			
 			return $stmt->execute();
 		}
@@ -313,7 +319,7 @@ public function atualizarLocais(){
 				if(!empty($nomeLocal)){ $stmt->bindParam(':nomeLocal', $nomeLocal);}
 				if(!empty($latitude)){$stmt->bindParam(':latitude', $latitude);}
 				if(!empty($longitude)){$stmt->bindParam(':longitude', $longitude);}
-
+				if(!empty($coordenadasPoligono)){$stmt->bindParam(':coordenadasPoligono', $coordenadasPoligono);}
 				$stmt->execute();
 			return $stmt->fetchAll();
 		}
@@ -328,6 +334,7 @@ public function atualizarLocais(){
 				if(!empty($nomeLocal)){ $stmt->bindParam(':nomeLocal', $nomeLocal);}
 				if(!empty($latitude)){$stmt->bindParam(':latitude', $latitude);}
 				if(!empty($longitude)){$stmt->bindParam(':longitude', $longitude);}
+				if(!empty($coordenadasPoligono)){$stmt->bindParam(':coordenadasPoligono', $coordenadasPoligono);}
 				$stmt->execute();
 			return $stmt->fetchAll();
 		}
@@ -339,6 +346,7 @@ public function atualizarLocais(){
 				if(!empty($nomeLocal)){ $stmt->bindParam(':nomeLocal', $nomeLocal);}
 				if(!empty($latitude)){$stmt->bindParam(':latitude', $latitude);}
 				if(!empty($longitude)){$stmt->bindParam(':longitude', $longitude);}
+				if(!empty($coordenadasPoligono)){$stmt->bindParam(':coordenadasPoligono', $coordenadasPoligono);}
 				$stmt->execute();
 			return $stmt->fetchAll();
 		}

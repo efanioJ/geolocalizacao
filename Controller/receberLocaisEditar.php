@@ -30,11 +30,13 @@ if(isset($_POST['excluir'])){
         $nomeLocal = $_POST['nomeLocal'];
         $latitude = $_POST['latitude'];
         $longitude = $_POST['longitude'];
+        $coordenadasPoligono = $_POST['coordenadasPoligono'];
         
         $s_locais->setIdLocal($idLocal);
         $s_locais->setNomeLocal($nomeLocal);
         $s_locais->setLatitude($latitude);
         $s_locais->setLongitude($longitude);
+        $s_locais->setCoordenadasPoligono($coordenadasPoligono);
          
     }
     if($s_locais->atualizarLocais()){

@@ -12,9 +12,10 @@ ini_set('default_charset','UTF-8');
       <meta charset="UTF-8">
       <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"  media="screen,projection"/>
       <link rel="stylesheet" href="../css/estilo/estilo.css">
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <title>Locais</title>
     </head>
@@ -52,6 +53,7 @@ ini_set('default_charset','UTF-8');
                             <label for="longitude" class="lead">Longitude<span class="corCamposObri">*</span></label>
                             <input type="text" name="longitude" id="longitude" class="form-control lead" placeholder="" ReadOnly>
                           </div>
+                          <input type="text" name="coordenadasPoligono" id="coordenadasPoligono" class="form-control lead inputFile" placeholder="" ReadOnly>
                           <div class="form-group col-md-3 align-self-end ">
                             <button type="button"  name = "buscar" id="buscar" role="button" class="btn btn btn-primary estiloFonte">Buscar no mapa</button>
                           </div>

@@ -19,7 +19,8 @@ CREATE TABLE locais (
 idLocal int(11) PRIMARY KEY AUTO_INCREMENT,
 nomeLocal VARCHAR (100) NOT NULL,
 latitude VARCHAR (100),
-longitude VARCHAR (100)
+longitude VARCHAR (100),
+coordenadasPoligono VARCHAR (800)
 );
 
 
